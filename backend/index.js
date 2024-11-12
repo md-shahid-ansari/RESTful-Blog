@@ -26,7 +26,7 @@ app.use(cookieParser()); // Parses incoming cookies
 
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
-app.use("/api/comment", commentRoutes);
+app.use("/api/comments", commentRoutes);
 
 app.listen(PORT, () => {
     connectDb();
