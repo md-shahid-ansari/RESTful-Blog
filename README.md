@@ -121,7 +121,7 @@ A RESTful API for managing blog posts and comments, allowing users to create, re
     "user":{...}
   }
   ```
-
+  **and**
 - **Endpoint**: `POST /api/auth/verify`
 - **Description**: Verify email of a new user using code sent to the email
 - **Request Body**:
