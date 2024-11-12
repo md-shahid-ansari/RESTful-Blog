@@ -18,7 +18,9 @@ export const verifyUser = async(req, res, next) => {
             if (!user) {
                 return res.status(400).json({ success: false, message: "user not found" });
             }
-            res.status(200).json({ success: true, user });
+            // set the user in req
+            req.user = user;
+
             next();  // Continue to the route handler
         } catch (error) {
             console.log("Error in check auth:", error);

@@ -8,7 +8,7 @@ const commentSchema = new mongoose.Schema({
     type: Number,
     unique: true
   },
-  post: {
+  post_id: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Post',
     required: true
@@ -17,7 +17,7 @@ const commentSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  user: {
+  author_id: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true

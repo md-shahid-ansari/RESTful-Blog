@@ -2,7 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import { connectDb } from "./db/connectDb.js";
 import authRoutes from "./routes/auth.route.js";
-import blogRoutes from "./routes/blog.route.js";
+import postRoutes from "./routes/post.route.js";
+import commentRoutes from "./routes/comment.route.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";  // Import cors
 
@@ -24,7 +25,8 @@ app.use(express.json()); // Allows input from req.body
 app.use(cookieParser()); // Parses incoming cookies
 
 app.use("/api/auth", authRoutes);
-app.use("/api/", blogRoutes);
+app.use("/api/posts", postRoutes);
+app.use("/api/comment", commentRoutes);
 
 app.listen(PORT, () => {
     connectDb();

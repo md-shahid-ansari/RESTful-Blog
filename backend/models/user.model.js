@@ -4,7 +4,7 @@ import AutoIncrementFactory from "mongoose-sequence";
 const AutoIncrement = AutoIncrementFactory(mongoose);
 
 const userSchema = new mongoose.Schema({
-  userId: {
+  id: {
     type: Number,
     unique: true
   },
@@ -41,6 +41,6 @@ const userSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 // Apply auto-increment to userId
-userSchema.plugin(AutoIncrement, { inc_field: 'userId', start_seq: 1 });
+userSchema.plugin(AutoIncrement, { inc_field: 'id', start_seq: 1 });
 
 export const User = mongoose.model('User', userSchema);
