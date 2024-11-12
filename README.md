@@ -474,6 +474,6 @@ All error responses follow a consistent structure:
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project was created during an internship.
 
 ---
