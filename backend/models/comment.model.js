@@ -32,7 +32,7 @@ const commentSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-// Apply auto-increment to commentId
+// auto-increment to commentId
 commentSchema.plugin(AutoIncrement, { inc_field: 'commentId', start_seq: 1 });
 
 export const Comment = mongoose.model('Comment', commentSchema);

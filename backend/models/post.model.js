@@ -31,7 +31,7 @@ const postSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-// Apply auto-increment to postId
+// auto-increment to postId
 postSchema.plugin(AutoIncrement, { inc_field: 'postId', start_seq: 1 });
 
 export const Post = mongoose.model('Post', postSchema);

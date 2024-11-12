@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import { User } from '../models/user.model.js';
 
 export const verifyUser = async(req, res, next) => {
-    const token = req.cookies.userToken;  // Updated to userToken
+    const token = req.cookies.userToken;  // userToken
     try {
         if (!token) {
             return res.status(401).json({ success: false, message: "Unauthorized - no token provided" });

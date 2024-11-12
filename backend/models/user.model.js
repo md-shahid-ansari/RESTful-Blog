@@ -40,7 +40,7 @@ const userSchema = new mongoose.Schema({
   verificationExpireAt: Date
 }, { timestamps: true });
 
-// Apply auto-increment to userId
+// auto-increment to userId
 userSchema.plugin(AutoIncrement, { inc_field: 'userId', start_seq: 1 });
 
 export const User = mongoose.model('User', userSchema);
